@@ -24,7 +24,7 @@ def customers(request):
                 break
         for customer in customers:
             # print(customer.email,customer.available_balance,semail)
-            if customer.email==semail and amt< customer.available_balance and amt>0 :
+            if customer.email==semail and amt< int(customer.available_balance) and amt>0 :
                 available_balance = customer.available_balance - amt
                 available_balance2 = j.available_balance + amt
                 try:
